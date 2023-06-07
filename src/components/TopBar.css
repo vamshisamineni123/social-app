@@ -1,0 +1,21 @@
+.TopBar-container{
+    height: 50px;
+    width:100%;
+    background-color: #1817f2;
+    display: flex;
+    align-items: center;/* aligns items vertically*/
+    top:0;
+    position:sticky;
+}
+.TopBar-Left{
+      flex:3;
+      background-color: red;
+}
+.TopBar-center{
+    flex:4;
+      background-color: greenyellow;
+}
+.TopBar-right{
+    flex:5;
+      background-color: red;
+}
