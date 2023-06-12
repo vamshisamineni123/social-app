@@ -19,8 +19,8 @@
     width: 12px;
     height: 12px;
     border-radius: 50%;
-    position: relative;
-    top:-5px;
+    position:relative;
+    top:10px;
     background-color: limegreen;
     position: absolute;
     top: -2px;

@@ -1,4 +1,4 @@
-export const Users = [
+export const users = [
     {
       id:1,
       profilePicture: "assets/person/1.jpeg",
@@ -51,7 +51,7 @@ export const Users = [
     },
   ];
   
-  export const Posts = [
+  export const posts = [
     {
       id: 1,
       desc: "Love For All, Hatred For None.",

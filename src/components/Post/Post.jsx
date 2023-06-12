@@ -2,7 +2,8 @@ import React from 'react'
 import './Post.css'
 import { MoreVert } from '@mui/icons-material'
 
-export default function Post() {
+export default function Post({post}) {
+    
     return (
         <div className='Post'>
             <div className='PostWrapper'>
@@ -12,7 +13,7 @@ export default function Post() {
                         <span className='PostUserName'>
                             Vamshi Samineni
                         </span>
-                        <span className='PostTime'>5min ago</span>
+                        <span className='PostTime'>{post.dae}</span>
                     </div>
                     <div className='PostTopRight'>
                         <MoreVert />
@@ -20,7 +21,8 @@ export default function Post() {
                 </div>
                 <div className='PostMiddle'>
                     <span className='PostMiddleText'>Hey, its my first post</span>
-                    <img className="img" src="/assets/post/1.jpeg" alt="Image should be aithey dispalyed" />
+                    
+                    <img className="img" src="{post.photo}" alt="Image should be aithey dispalyed" />
                 </div>
                 <div className='PostBottom'>
                     <div className="PostBottomLeft">
