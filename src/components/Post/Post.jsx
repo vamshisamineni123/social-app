@@ -33,7 +33,7 @@ export default function Post({post}) {
                     </div>
                 </div>
                 <div className='PostMiddle'>
-                    <span className='PostMiddleText'>Hey, its my first post</span>
+                    <span className='PostMiddleText'>{post.desc}</span>
                     
                     <img className="img" src={"../"+post.photo} alt="Image should be aithey dispalyed" />
                 </div>

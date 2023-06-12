@@ -1,5 +1,7 @@
 import React from 'react'
 import './SideBar.css'
+import { users } from '../../dummyData';
+import CloseFriends from '../closeFriends/CloseFriends';
 import {
     RssFeed,
     Chat,
@@ -57,7 +59,13 @@ function SideBar() {
                 <button className='SideBarButton'>Show More</button>
                 <hr className='SideBarHr'/ >
                  <ul className='SideBarFriendsList'>
-                 SideBarFriendsList
+                 {
+                    
+                       users.map((user)=>{
+                        console.log('i am dng ')
+                        return <CloseFriends key={user.id} user={user}/>
+                       })
+                 }
                  </ul>
             </div>
         </div>

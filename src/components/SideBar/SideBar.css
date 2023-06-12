@@ -1,7 +1,6 @@
 .SideBar{
     flex: 25%;
     overflow-y:scroll ;
-  
     -webkit-box-shadow: 0px 0px 16px -8px rgba(0, 0, 0, 0.68);
 }
 ::-webkit-scrollbar{
@@ -11,7 +10,7 @@
     background-color:#f1f1f1;
 }
 ::-webkit-scrollbar-thumb {
-    background-color: rgb(179, 179, 179);
+    background-color: red;
   }
 .SideBarWrapper{
     padding: 20px;
@@ -45,5 +44,8 @@
    margin:20px 0;
 }
 .SideBarFriendsList{
-     
+     list-style: none;
+     display: flex;
+     flex-direction: column;
+     justify-content: flex-start;
 }
