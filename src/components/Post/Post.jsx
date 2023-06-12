@@ -1,8 +1,21 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Post.css'
 import { MoreVert } from '@mui/icons-material'
+import {useSelector,useDispatch} from "react-redux"
+import { LikeIncrement,LikeDecrement,LoveDecrement,LoveIncrement } from '../../reducers/LikeSlice'
+
+
 
 export default function Post({post}) {
+    const like=useSelector((state)=>state.likelove.like);
+   // const {like,setLike}=useState(li)
+    
+    const dispacth=useDispatch();
+    
+    const handleLike=()=>{
+        dispacth(LikeIncrement(like))
+    }
+    
     
     return (
         <div className='Post'>
@@ -13,7 +26,7 @@ export default function Post({post}) {
                         <span className='PostUserName'>
                             Vamshi Samineni
                         </span>
-                        <span className='PostTime'>{post.dae}</span>
+                        <span className='PostTime'>{post.date}</span>
                     </div>
                     <div className='PostTopRight'>
                         <MoreVert />
@@ -22,13 +35,13 @@ export default function Post({post}) {
                 <div className='PostMiddle'>
                     <span className='PostMiddleText'>Hey, its my first post</span>
                     
-                    <img className="img" src="{post.photo}" alt="Image should be aithey dispalyed" />
+                    <img className="img" src={"../"+post.photo} alt="Image should be aithey dispalyed" />
                 </div>
                 <div className='PostBottom'>
                     <div className="PostBottomLeft">
-                        <img className="likeIcon" src="/assets/like.png" alt="Image should be displayed" />
+                        <img className="likeIcon" src="/assets/like.png" alt="Image should be displayed" onClick={handleLike}/>
                         <img className="heartIcon" src="/assets/heart.png" alt="Image should be displayed" />
-                        <span className="PostLikeCounter">5 people like it</span>
+                        <span className="PostLikeCounter">{like} people like it</span>
                     </div>
                     <div className="PostBottomRight">
                         <span className="PostCommentText">5 comments</span>

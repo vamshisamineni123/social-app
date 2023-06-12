@@ -10,11 +10,10 @@ function Feed() {
                 <Share />
                 {
                     posts.map((post)=>{ 
-                        <Post key={post.id} post={post} />
+                       return <Post key={post.id} post={post} />
                     })
                 }
             </div>
-
         </div>
     )
 }

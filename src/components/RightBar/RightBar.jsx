@@ -1,6 +1,7 @@
 import React from 'react'
 import './RightBar.css'
 import Online from '../Online/Online';
+import { users } from '../../dummyData';
 function RightBar() {
     return (
         <div className='rightBar'>
@@ -12,7 +13,11 @@ function RightBar() {
                 <img className='rightBarAd' src="/assets/ad.png" alt="alt"/>
                 <h1 className='rightBarTitle'>Online Friends</h1>
                 <ul className='rightBarFriendList'>
-                  <Online />
+                {
+                    users.map((user)=>{
+                       return <Online user={user}/>
+                    })
+                }
                 </ul>
             </div>
         </div>
